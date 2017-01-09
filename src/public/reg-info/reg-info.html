@@ -1,0 +1,34 @@
+<div class="container">
+<h1>Registration Details</h1>
+
+<span ng-if='regCtrl.userInfo===undefined || regCtrl.userInfo===null'>
+  Not Signed Up Yet. <a ui-sref='public.signup'>Sign up Now!</a>
+</span>
+
+
+<fieldset ng-if='!(regCtrl.userInfo==undefined || regCtrl.userInfo===null)'>
+  <legend>User Registration Information</legend>
+
+    <span>
+     <label>First Name</label>  {{ regCtrl.userInfo.firstName }}
+   </span>
+     <br>
+    <span>
+     <label>Last Name</label>  {{ regCtrl.userInfo.lastName }}
+    </span>
+     <br>
+    <span>
+       <label>Email</label>  {{ regCtrl.userInfo.email }}
+    </span>
+     <br>
+     <span>
+     <label>Phone</label>  {{ regCtrl.userInfo.phone }}
+    </span>
+     <br>
+     <span>
+     <label>Favorite Dish</label>  {{ regCtrl.userInfo.favDish }}
+   </span>
+     <br>
+     <menu-item  menu-item='regCtrl.userInfo.favDishData'></menu-item>
+  </fieldset>
+</div>
