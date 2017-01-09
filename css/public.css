@@ -239,3 +239,8 @@ button {
 span.validation {
   color:red;
 }
+
+button[disabled] { /*disabling logic */
+    cursor: default;
+    background-color: white;
+}
